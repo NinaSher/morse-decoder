@@ -38,11 +38,20 @@ const MORSE_TABLE = {
 };
 
 function decode(expr) {
-    return expr.toUpperCase().split("").map(el => {
-		return MORSE_TABLE[el] ? MORSE_TABLE[el] : el;}).join("")
+	let res="";
+	for (let i =0; i < expr.split(" ").length; i ++){
+		if(i === " "){
+			res += " ";
+		} else {
+			res += MORSE_TABLE[expr.split(" ")[i]];
+		}
+	}
+	return res;
+   // return expr.toUpperCase().split("").map(el => {
+		//return MORSE_TABLE[el] ? MORSE_TABLE[el] : el;}).join("")
 };
 
 module.exports = {
     decode
 }
-console.log(decode)
+//console.log(decode)
