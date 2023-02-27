@@ -40,9 +40,9 @@ const MORSE_TABLE = {
 function decode(expr) {
     return expr.toUpperCase().split("").map(el => {
 		return MORSE_TABLE[el] ? MORSE_TABLE[el] : el;}).join("")
-	
 };
 
 module.exports = {
     decode
 }
+console.log(decode)
