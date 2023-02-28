@@ -47,6 +47,7 @@ function decode(expr) {
 		}
 	}
 	return res;
+	
    // return expr.toUpperCase().split("").map(el => {
 		//return MORSE_TABLE[el] ? MORSE_TABLE[el] : el;}).join("")
 };
